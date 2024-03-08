@@ -16,7 +16,7 @@ public class Calculadora extends javax.swing.JFrame {
     public Calculadora() {
         initComponents();
     }
-    int num1,num2;
+    Double num1,num2;
     String signo;
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,8 +50,9 @@ public class Calculadora extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 0, 204), 1, true));
@@ -323,49 +324,49 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:}
-        num1 = Integer.parseInt(jLabel2.getText());
+        num1 = Double.parseDouble(jLabel2.getText());
         signo = "/";
         jLabel2.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        num1 = Integer.parseInt(jLabel2.getText());
+        num1 = Double.parseDouble(jLabel2.getText());
         signo = "*";
         jLabel2.setText("");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        num1 = Integer.parseInt(jLabel2.getText());
+        num1 = Double.parseDouble(jLabel2.getText());
         signo = "-";
         jLabel2.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        num1 = Integer.parseInt(jLabel2.getText());
+        num1 = Double.parseDouble(jLabel2.getText());
         signo = "+";
         jLabel2.setText("");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
-        num2 = Integer.parseInt(jLabel2.getText());
+        num2 = Double.parseDouble(jLabel2.getText());
         if(signo == "+"){
-            jLabel2.setText(Integer.toString(num1+num2));
+            jLabel2.setText(Double.toString(num1+num2));
         }
         
         if(signo == "-"){
-            jLabel2.setText(Integer.toString(num1-num2));
+            jLabel2.setText(Double.toString(num1-num2));
         }
         
         if(signo == "*"){
-            jLabel2.setText(Integer.toString(num1*num2));
+            jLabel2.setText(Double.toString(num1*num2));
         }
         
         if(signo == "/"){
-            jLabel2.setText(Integer.toString(num1/num2));
+            jLabel2.setText(Double.toString(num1/num2));
         }
              
     }//GEN-LAST:event_jButton20ActionPerformed
